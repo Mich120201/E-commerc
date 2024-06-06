@@ -80,25 +80,9 @@
         ///<summary>
         ///Create new product
         /// </summary>
-        /// <param name="productname">Product name</param>
-        /// <param name="productdescription">Product description</param>
-        /// <param name="producttotalprice">Product total price</param>
-        /// <param name="productweight">Product weight</param>
-        /// <param name="productsizex">Product size X</param>
-        /// <param name="productsizey">Product size Y</param>
-        /// <param name="productsizez">Product size Z</param>
-        /// <param name="productstock">Product stock</param>
+        /// <param name="product">New product</param>
         /// <returns>bool</returns>
-        Task<bool> CreateProductAsync(
-            string productname,
-            string productdescription,
-            float producttotalprice,
-            float productweight,
-            float productsizex,
-            float productsizey,
-            float productsizez,
-            uint productstock
-            );
+        Task<bool> CreateProductAsync(Product product);
 
         /// <summary>
         /// Update product name

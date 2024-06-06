@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -15,7 +16,7 @@ namespace ecommerce.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "OptionsGroup",
+                name: "OptionsGroups",
                 columns: table => new
                 {
                     OptionGroupId = table.Column<int>(type: "int", nullable: false)
@@ -25,7 +26,7 @@ namespace ecommerce.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OptionsGroup", x => x.OptionGroupId);
+                    table.PrimaryKey("PK_OptionsGroups", x => x.OptionGroupId);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -84,9 +85,9 @@ namespace ecommerce.Migrations
                 {
                     table.PrimaryKey("PK_Options", x => x.OptionId);
                     table.ForeignKey(
-                        name: "FK_Options_OptionsGroup_OptionGroupId",
+                        name: "FK_Options_OptionsGroups_OptionGroupId",
                         column: x => x.OptionGroupId,
-                        principalTable: "OptionsGroup",
+                        principalTable: "OptionsGroups",
                         principalColumn: "OptionGroupId",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -140,7 +141,7 @@ namespace ecommerce.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "OptionsOptionGroup",
+                name: "ProductOptions",
                 columns: table => new
                 {
                     ProductOptionId = table.Column<int>(type: "int", nullable: false)
@@ -151,9 +152,9 @@ namespace ecommerce.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OptionsOptionGroup", x => x.ProductOptionId);
+                    table.PrimaryKey("PK_ProductOptions", x => x.ProductOptionId);
                     table.ForeignKey(
-                        name: "FK_OptionsOptionGroup_Options_OptionId",
+                        name: "FK_ProductOptions_Options_OptionId",
                         column: x => x.OptionId,
                         principalTable: "Options",
                         principalColumn: "OptionId",
@@ -183,16 +184,16 @@ namespace ecommerce.Migrations
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
                     table.ForeignKey(
-                        name: "FK_Products_OptionsOptionGroup_ProductOptionId",
+                        name: "FK_Products_ProductOptions_ProductOptionId",
                         column: x => x.ProductOptionId,
-                        principalTable: "OptionsOptionGroup",
+                        principalTable: "ProductOptions",
                         principalColumn: "ProductOptionId",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "OrderDetail",
+                name: "OrderDetails",
                 columns: table => new
                 {
                     DetailId = table.Column<int>(type: "int", nullable: false)
@@ -206,15 +207,15 @@ namespace ecommerce.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderDetail", x => x.DetailId);
+                    table.PrimaryKey("PK_OrderDetails", x => x.DetailId);
                     table.ForeignKey(
-                        name: "FK_OrderDetail_Orders_OrderId",
+                        name: "FK_OrderDetails_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "OrderId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderDetail_Products_ProductId",
+                        name: "FK_OrderDetails_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "ProductId",
@@ -250,24 +251,24 @@ namespace ecommerce.Migrations
                 column: "OptionGroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OptionsOptionGroup_OptionId",
-                table: "OptionsOptionGroup",
-                column: "OptionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_OrderDetail_OrderId",
-                table: "OrderDetail",
+                name: "IX_OrderDetails_OrderId",
+                table: "OrderDetails",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetail_ProductId",
-                table: "OrderDetail",
+                name: "IX_OrderDetails_ProductId",
+                table: "OrderDetails",
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_UserId",
                 table: "Orders",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProductOptions_OptionId",
+                table: "ProductOptions",
+                column: "OptionId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_ProductOptionId",
@@ -284,7 +285,7 @@ namespace ecommerce.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "OrderDetail");
+                name: "OrderDetails");
 
             migrationBuilder.DropTable(
                 name: "Thumbs");
@@ -299,13 +300,13 @@ namespace ecommerce.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "OptionsOptionGroup");
+                name: "ProductOptions");
 
             migrationBuilder.DropTable(
                 name: "Options");
 
             migrationBuilder.DropTable(
-                name: "OptionsGroup");
+                name: "OptionsGroups");
         }
     }
 }

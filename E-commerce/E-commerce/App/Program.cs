@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddEntityFrameworkMySql();
+builder.Services.AddControllers();
 
 string? connectionString = builder.Configuration["Db_Connection_String"];
 
@@ -43,6 +44,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Product}");
 
 app.UseStaticFiles();
 app.UseAntiforgery();

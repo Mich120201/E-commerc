@@ -34,29 +34,10 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
 
         }
 
-        public async Task<bool> CreateProductAsync(
-            string productname,
-            string productdescription,
-            float producttotalprice,
-            float productweight,
-            float productsizex,
-            float productsizey,
-            float productsizez,
-            uint productstock
-            )
+        public async Task<bool> CreateProductAsync(Product product)
         {
             try
             {
-                Product product = new();
-                product.ProductName = productname;
-                product.PrductDescription = productdescription;
-                product.ProductTotalPrice = producttotalprice;
-                product.ProductWeight = productweight;
-                product.ProductSizeX = productsizex;
-                product.ProductSizeY = productsizey;
-                product.ProductSizeZ = productsizez;
-                product.ProductStock = productstock;
-
                 _appDbContext.Products.Add(product);
                 _appDbContext.SaveChanges();
                 return true;
