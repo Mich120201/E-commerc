@@ -15,15 +15,15 @@
         /// </summary>
         /// <param name="id">User id</param>
         /// <returns>User/null</returns>
-        Task<User?> GetUserById(int id);
+        Task<User?> GetUserByIdAsync(Guid id);
 
         /// <summary>
         /// Get user by email
         /// </summary>
         /// <param name="Email">User email</param>
         /// <returns>User/null</returns>
-        Task<User?> GetUserByEmail(string Email);
-
+        Task<User?> GetUserByEmailAsync(string Email);
+        /*
         /// <summary>
         /// Get user id
         /// </summary>
@@ -142,49 +142,18 @@
         /// <param name="user"></param>
         /// <returns>string/null</returns>
         Task<string?> GetAddress2(User user);
+        */
 
         ///</get>
 
-        ///<Update>
+        ///<post>
 
         ///<summary>
         ///Create new user
         /// </summary>
-        /// <param name="address1">User first address</param>
-        /// <param name="address2">User second address</param>
-        /// <param name="city">User city</param>
-        /// <param name="country">User country</param>
-        /// <param name="email">User email</param>
-        /// <param name="emailverified">User email verification</param>
-        /// <param name="fax">User fax</param>
-        /// <param name="firstname">User first name</param>
-        /// <param name="lastname">User last name</param>
-        /// <param name="password">User password (clear)</param>
-        /// <param name="phone">User phone number</param>
-        /// <param name="registrationdate">User registration date</param>
-        /// <param name="state">User geopolitical state</param>
-        /// <param name="userip">User ip address</param>
-        /// <param name="verificationcode">User verification code</param>
-        /// <param name="zip">User zip</param>
-        /// <returns>User/null</returns>
-        Task<User?> CreateUser(
-            string email,
-            string password,
-            string? firstname,
-            string? lastname,
-            string? city,
-            string? state,
-            string? zip,
-            byte emailverified,
-            Timestamp registrationdate,
-            string verificationcode,
-            string? userip,
-            string? phone,
-            string? fax,
-            string? country,
-            string address1,
-            string address2
-            );
+        /// <param name="user">User</param>
+        /// <returns>bool</returns>
+        Task<bool> CreateUserAsync(User user);
 
         /// <summary>
         /// Update user email
@@ -192,7 +161,7 @@
         /// <param name="user"></param>
         /// <param name="email">User new email</param>
         /// <returns>user</returns>
-        Task<User> UpdateEmail(User user, string email);
+        Task<User> UpdateEmailAsync(User user, string email);
 
         /// <summary>
         /// Update user password
@@ -200,7 +169,7 @@
         /// <param name="user"></param>
         /// <param name="password">User new password</param>
         /// <returns>User</returns>
-        Task<User> UpdatePassword(User user, string password);
+        Task<User> UpdatePasswordAsync(User user, string password);
 
         /// <summary>
         /// Update user first name
@@ -208,7 +177,7 @@
         /// <param name="user"></param>
         /// <param name="firstname">User new first name</param>
         /// <returns>User</returns>
-        Task<User> UpdateFirstName(User user, string? firstname);
+        Task<User> UpdateFirstNameAsync(User user, string? firstname);
 
         /// <summary>
         /// Update user last name
@@ -216,7 +185,7 @@
         /// <param name="user"></param>
         /// <param name="lastname">User new last name</param>
         /// <returns>User</returns>
-        Task<User> UpdateLastName(User user, string? lastname);
+        Task<User> UpdateLastNameAsync(User user, string? lastname);
 
         /// <summary>
         /// Update user city
@@ -224,7 +193,7 @@
         /// <param name="user">User</param>
         /// <param name="city">User new city</param>
         /// <returns>User</returns>
-        Task<User> UpdateCity(User user, string? city);
+        Task<User> UpdateCityAsync(User user, string? city);
 
         /// <summary>
         /// Update user state
@@ -232,7 +201,7 @@
         /// <param name="user"></param>
         /// <param name="state">User new state</param>
         /// <returns>User</returns>
-        Task<User> UpdateState(User user, string? state);
+        Task<User> UpdateStateAsync(User user, string? state);
 
         /// <summary>
         /// Update user zip
@@ -240,7 +209,7 @@
         /// <param name="user"></param>
         /// <param name="zip">New user zip</param>
         /// <returns>User</returns>
-        Task<User> UpdateZip(User user, string? zip);
+        Task<User> UpdateZipAsync(User user, string? zip);
 
         /// <summary>
         /// Update user email verification
@@ -248,7 +217,7 @@
         /// <param name="user"></param>
         /// <param name="emailverified">User new email verification</param>
         /// <returns>User</returns>
-        Task<User> UpdateEmailVerified(User user, byte emailverified);
+        Task<User> UpdateEmailVerifiedAsync(User user, byte emailverified);
 
         /// <summary>
         /// Update user verification code
@@ -256,7 +225,7 @@
         /// <param name="user"></param>
         /// <param name="verificationcode">User new verification code</param>
         /// <returns>User</returns>
-        Task<User> UpdateVerificationCode(User user, string verificationcode);
+        Task<User> UpdateVerificationCodeAsync(User user, string verificationcode);
 
         /// <summary>
         /// Update user ip address
@@ -264,7 +233,7 @@
         /// <param name="user"></param>
         /// <param name="ip">User new ip address</param>
         /// <returns>User</returns>
-        Task<User> UpdateIp(User user, string? ip);
+        Task<User> UpdateIpAsync(User user, string? ip);
 
         /// <summary>
         /// Update user phone number
@@ -272,7 +241,7 @@
         /// <param name="user"></param>
         /// <param name="phone">User new phone number</param>
         /// <returns>User</returns>
-        Task<User> UpdatePhone(User user, string? phone);
+        Task<User> UpdatePhoneAsync(User user, string? phone);
 
         /// <summary>
         /// Update user fax
@@ -280,7 +249,7 @@
         /// <param name="user"></param>
         /// <param name="fax">User new fax</param>
         /// <returns>User</returns>
-        Task<User> UpdateFax(User user, string? fax);
+        Task<User> UpdateFaxAsync(User user, string? fax);
 
         /// <summary>
         /// Update user country
@@ -288,7 +257,7 @@
         /// <param name="user"></param>
         /// <param name="country">User new country</param>
         /// <returns>User</returns>
-        Task<User> UpdateCountry(User user, string? country);
+        Task<User> UpdateCountryAsync(User user, string? country);
 
         /// <summary>
         /// Update user first address
@@ -296,7 +265,7 @@
         /// <param name="user"></param>
         /// <param name="address1">User new first address</param>
         /// <returns>User</returns>
-        Task<User> UpdateAddress1(User user, string? address1);
+        Task<User> UpdateAddress1Async(User user, string? address1);
 
         /// <summary>
         /// Update user second address
@@ -304,13 +273,26 @@
         /// <param name="user"></param>
         /// <param name="address2">User new second address</param>
         /// <returns>User</returns>
-        Task<User> UpdateAddress2(User user, string? address2);
+        Task<User> UpdateAddress2Async(User user, string? address2);
 
-        /// </Update>
+        /// <summary>
+        /// Update all User
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <param name="user">New user</param>
+        /// <returns>bool</returns>
+        Task<bool> UpdateUserAsync(Guid id, User user);
 
-        ///<Delete>
+        /// </post>
 
+        ///<delete>
 
+        ///<summary>
+        /// Delete user
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <returns>bool</returns>
+        Task<bool> DeleteUserAsync(Guid id);
 
         /// </Delete>
     }

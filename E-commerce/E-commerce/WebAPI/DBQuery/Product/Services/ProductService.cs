@@ -3,6 +3,7 @@
 namespace ecommerce.WebAPI.DBQuery.Product.Services
 {
     using ecommerce.DBContext;
+    using ecommerce.Models.Order.Models;
     using ecommerce.Models.Product.Models;
 
     /// <summary>
@@ -26,7 +27,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             _errorHandler.RiseExceptions();
         }
 
-        public async Task<Product?> GetProductByIdAsync(int id)
+        public async Task<Product?> GetProductByIdAsync(Guid id)
         {
 
             Product? product = await _appDbContext.Products.FindAsync(id) ?? null;
@@ -38,7 +39,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
         {
             try
             {
-                _appDbContext.Products.Add(product);
+                await _appDbContext.Products.AddAsync(product);
                 _appDbContext.SaveChanges();
                 return true;
             }
@@ -49,7 +50,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             return false;
         }
 
-        public async Task<bool> UpdateProductNameAsync(int id, string productname)
+        public async Task<bool> UpdateProductNameAsync(Guid id, string productname)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -65,13 +66,13 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductDescriptionAsync(int id, string productdescription)
+        public async Task<bool> UpdateProductDescriptionAsync(Guid id, string productdescription)
         {
             Product? product = await GetProductByIdAsync(id);
 
             if (product != null)
             {
-                product.PrductDescription = productdescription;
+                product.ProductDescription = productdescription;
                 _appDbContext.SaveChanges();
                 return true;
             }
@@ -81,7 +82,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductTotalPriceAsync(int id, float producttotalprice)
+        public async Task<bool> UpdateProductTotalPriceAsync(Guid id, float producttotalprice)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -97,7 +98,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductWeightAsync(int id, float productweight)
+        public async Task<bool> UpdateProductWeightAsync(Guid id, float productweight)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -113,7 +114,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductSizeXAsync(int id, float productsizex)
+        public async Task<bool> UpdateProductSizeXAsync(Guid id, float productsizex)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -129,7 +130,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductSizeYAsync(int id, float productsizey)
+        public async Task<bool> UpdateProductSizeYAsync(Guid id, float productsizey)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -145,7 +146,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductSizeZAsync(int id, float productsizez)
+        public async Task<bool> UpdateProductSizeZAsync(Guid id, float productsizez)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -161,7 +162,7 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> UpdateProductStockAsync(int id, uint productstock)
+        public async Task<bool> UpdateProductStockAsync(Guid id, uint productstock)
         {
             Product? product = await GetProductByIdAsync(id);
 
@@ -177,13 +178,36 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> DeleteProductAsync(int id)
+        public async Task<bool> UpdateProductAsync(Guid id, Product _product)
         {
             Product? product = await GetProductByIdAsync(id);
 
             if (product != null)
             {
-                _appDbContext.Remove(product);
+                product.ProductStock = _product.ProductStock;
+                product.ProductName = _product.ProductName;
+                product.ProductTotalPrice = _product.ProductTotalPrice;
+                product.ProductDescription = _product.ProductDescription;
+                product.ProductSizeX = _product.ProductSizeX;
+                product.ProductSizeY = _product.ProductSizeY;
+                product.ProductSizeZ = _product.ProductSizeZ;
+                product.ProductWeight = _product.ProductWeight;
+                _appDbContext.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteProductAsync(Guid id)
+        {
+            Product? product = await GetProductByIdAsync(id);
+
+            if (product != null)
+            {
+                _appDbContext.Products.Remove(product);
                 _appDbContext.SaveChanges();
                 return true;
             }

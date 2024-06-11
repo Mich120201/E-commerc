@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddEntityFrameworkMySql();
+//builder.Services.AddEntityFrameworkMySql();
 builder.Services.AddControllers();
 
 string? connectionString = builder.Configuration["Db_Connection_String"];
@@ -50,10 +50,29 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+/*
+app.MapControllerRoute(
+    name: "product",
+    pattern: "{controller=Product}");
+
+app.MapControllerRoute(
+    name: "productoption",
+    pattern: "{controller=ProductOption}");
+
+app.MapControllerRoute(
+    name: "thumbimage",
+    pattern: "{controller=ThumbImage}");
+
+app.MapControllerRoute(
+    name: "option",
+    pattern: "{controller=Option}");
+*/
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Product}");
+    pattern: "controller"
+    );
+
 
 app.UseStaticFiles();
 app.UseAntiforgery();

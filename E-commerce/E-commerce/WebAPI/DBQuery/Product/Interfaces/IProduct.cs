@@ -14,7 +14,7 @@
         /// </summary>
         /// <param name="id">Product id</param>
         /// <returns>Product/null</returns>
-        Task<Product?> GetProductByIdAsync(int id);
+        Task<Product?> GetProductByIdAsync(Guid id);
 
         /*
         ///<summary>
@@ -90,7 +90,7 @@
         /// <param name="id">Product id</param>
         /// <param name="productname">New product Name</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductNameAsync(int id, string productname);
+        Task<bool> UpdateProductNameAsync(Guid id, string productname);
 
         /// <summary>
         /// Update product description
@@ -98,7 +98,7 @@
         /// <param name="id">Product id</param>
         /// <param name="productdescription">New product description</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductDescriptionAsync(int id, string productdescription);
+        Task<bool> UpdateProductDescriptionAsync(Guid id, string productdescription);
 
         /// <summary>
         /// Update product total price
@@ -106,7 +106,7 @@
         /// <param name="id">Product id</param>
         /// <param name="producttotalprice">New product total price</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductTotalPriceAsync(int id, float producttotalprice);
+        Task<bool> UpdateProductTotalPriceAsync(Guid id, float producttotalprice);
 
         /// <summary>
         /// Update product weight
@@ -114,7 +114,7 @@
         /// <param name="id">Product id</param>
         /// <param name="productweight">New product weight</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductWeightAsync(int id, float productweight);
+        Task<bool> UpdateProductWeightAsync(Guid id, float productweight);
 
         /// <summary>
         /// Update roduct size X
@@ -122,7 +122,7 @@
         /// <param name="id">Product id</param>
         /// <param name="productsizex">New product size X</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductSizeXAsync(int id, float productsizex);
+        Task<bool> UpdateProductSizeXAsync(Guid id, float productsizex);
 
         /// <summary>
         /// Update product size Y
@@ -130,7 +130,7 @@
         /// <param name="id">Product id</param>
         /// <param name="productsizey">New product size Y</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductSizeYAsync(int id, float productsizey);
+        Task<bool> UpdateProductSizeYAsync(Guid id, float productsizey);
 
         /// <summary>
         /// Update product size Z
@@ -138,7 +138,7 @@
         /// <param name="id">Product id</param>
         /// <param name="productsizez">New product size Z</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductSizeZAsync(int id, float productsizez);
+        Task<bool> UpdateProductSizeZAsync(Guid id, float productsizez);
 
         /// <summary>
         /// Update product stock
@@ -146,7 +146,15 @@
         /// <param name="id">Product id</param>
         /// <param name="productstock">New product stock</param>
         /// <returns>bool</returns>
-        Task<bool> UpdateProductStockAsync(int id, uint productstock);
+        Task<bool> UpdateProductStockAsync(Guid id, uint productstock);
+
+        /// <summary>
+        /// Update all product
+        /// </summary>
+        /// <param name="id">Product id</param>
+        /// <param name="product">New product</param>
+        /// <returns>bool</returns>
+        Task<bool> UpdateProductAsync(Guid id, Product product);
 
         /// </Post>
 
@@ -157,7 +165,7 @@
         /// </summary>
         /// <param name="id">Product id</param>
         /// <returns>bool</returns>
-        Task<bool> DeleteProductAsync(int id);
+        Task<bool> DeleteProductAsync(Guid id);
 
         /// </Delete>
     }

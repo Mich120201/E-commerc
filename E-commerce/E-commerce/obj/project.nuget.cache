@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ul/j6/D8mE=",
+  "dgSpecHash": "uvTf7E8rWkg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

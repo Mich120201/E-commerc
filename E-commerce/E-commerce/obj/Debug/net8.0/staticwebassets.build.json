@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jdDtV+2p2aL2EGdVQpLcxdooXRbPwwu20QDSdqHialg=",
+  "Hash": "LyOs9y7caXqVwmTZLUuN68T6NvXB2NXdCwckkeg5BKo=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ecommerce\\wwwroot",
       "Source": "ecommerce",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
       "BasePath": "_content/ecommerce",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce.styles.css",
+      "Identity": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce.styles.css",
       "SourceId": "ecommerce",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ecommerce",
       "RelativePath": "ecommerce.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css",
+      "Identity": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css",
       "SourceId": "ecommerce",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ecommerce",
       "RelativePath": "ecommerce.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\app.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
       "BasePath": "_content/ecommerce",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
       "BasePath": "_content/ecommerce",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
       "BasePath": "_content/ecommerce",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\favicon.png",
       "SourceId": "ecommerce",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
       "BasePath": "_content/ecommerce",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

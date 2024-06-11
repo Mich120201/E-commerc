@@ -1,11 +1,10 @@
-﻿using System.Security.Policy;
-using ecommerce.DBContext;
+﻿using ecommerce.DBContext;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.WebAPI.Controllers.Product
 {
     using ecommerce.Models.Product.Models;
-    using ecommerce.WebAPI.DBQuery.Product;
+    using ecommerce.WebAPI.DBQuery.Order.Services;
     using ecommerce.WebAPI.DBQuery.Product.Services;
 
     [Route("api/[controller]")]
@@ -22,7 +21,7 @@ namespace ecommerce.WebAPI.Controllers.Product
         }
 
         [HttpGet]
-        public async Task<Product?> Get([FromBody] int id)
+        public async Task<Product?> Get([FromBody] Guid id)
         {
             return await _productService.GetProductByIdAsync(id);
         }
@@ -30,30 +29,41 @@ namespace ecommerce.WebAPI.Controllers.Product
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Product product)
         {
-
             if (await _productService.CreateProductAsync(product))
             {
-                return Created();
+                return StatusCode(201, true);
             }
             else
             {
-                return Json(new { status = "error", message = "could not create new product" });
+                return StatusCode(500, false);
             }
 
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] int id)
+        public async Task<IActionResult> Delete([FromBody] Guid id)
         {
             if (await _productService.DeleteProductAsync(id))
             {
-                return Ok();
+                return StatusCode(200, true);
             }
             else
             {
-                return Json(new { status = "error", message = "could not delete product" });
+                return StatusCode(500, false);
             }
         }
 
+        [HttpPut]
+        public async Task<IActionResult> Put(Guid id, [FromBody] Product product)
+        {
+            if (await _productService.UpdateProductAsync(id, product))
+            {
+                return StatusCode(200, true);
+            }
+            else
+            {
+                return StatusCode(500, false);
+            }
+        }
     }
 }

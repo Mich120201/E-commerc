@@ -8,8 +8,8 @@ namespace ecommerce.Models.User.Models
     {
         // keys/
 
-        [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public int UserId { get; set; }
-        public ICollection<Order> Orders { get; set; }
+        [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public Guid UserId { get; set; }
+        public ICollection<Order>? Orders { get; set; }
 
         // /keys
 

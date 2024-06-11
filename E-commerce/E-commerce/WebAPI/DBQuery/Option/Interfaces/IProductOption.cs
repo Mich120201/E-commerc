@@ -14,90 +14,47 @@
         ///Get product option
         /// </summary>
         /// <param name="id">Product option id</param>
-        /// <returns>ProductOption</returns>
-        Task<ProductOption> GetProductOption(int id);
-
-        /// <summary>
-        /// Get product option id
-        /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <returns>int</returns>
-
-        Task<int> GetOptionId(ProductOption ProductOption);
-
-        /// <summary>
-        /// Get product option product id
-        /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <returns>int</returns>
-
-        Task<int> GetProductId(ProductOption ProductOption);
-
-        /// <summary>
-        /// Get product option group id
-        /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <returns>uint</returns>
-        Task<uint> GetOptionGroupId(ProductOption ProductOption);
-
-        /// <summary>
-        /// Get product option price increment
-        /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <returns>double</returns>
-        Task<double> GetOptionPriceIncrement(ProductOption ProductOption);
+        /// <returns>ProductOption/null</returns>
+        Task<ProductOption?> GetProductOptionByIdAsync(Guid id);
 
         /// </get>
 
-        ///<set>
+        ///<post>
 
         ///<summary>
         ///Create new production option
         /// </summary>
-        /// <param name="optionid">Option id</param>
-        /// <param name="productid">Product id</param>
-        /// <param name="optiongroupid">Option group id</param>
-        /// <param name="optionpriceincrement">Option price increment</param>
+        /// <param name="productoption">Option option</param>
         /// <returns>ProductOption</returns>
-        Task<ProductOption> CreateProductOption(
-            int optionid,
-            int productid,
-            uint optiongroupid,
-            double optionpriceincrement
-            );
+        Task<bool> CreateProductOptionAsync(ProductOption productoption);
 
         /// <summary>
         /// Update option id
         /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <param name="optionid">Option id</param>
+        /// <param name="id">Product option id</param>
+        /// <param name="optionpriceincrement">New pption price increment</param>
         /// <returns>ProductOption</returns>
-        Task<ProductOption> UpdateOptionId(ProductOption ProductOption, int optionid);
+        Task<bool> UpdateProductOptionPriceIncrementAsync(Guid id, double optionpriceincrement);
 
         /// <summary>
-        /// Update product option
+        /// Update all product option
         /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <param name="productid">Product id</param>
-        /// <returns>ProductOption</returns>
-        Task<ProductOption> UpdateProductId(ProductOption ProductOption, int productid);
+        /// <param name="id">Product option id</param>
+        /// <param name="productoption">New product option</param>
+        /// <returns>bool</returns>
+        Task<bool> UpdateProductOptionAsync(Guid id, ProductOption productoption);
 
-        /// <summary>
-        /// Update option group id
+        /// </post>
+
+        ///<delete>
+
+        ///<summary>
+        ///Delete product option
         /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <param name="productid">Product id</param>
-        /// <returns>ProductOption</returns>
-        Task<ProductOption> UpdateOptionGroupId(ProductOption ProductOption, uint productid);
+        /// <param name="id">Product option id</param>
+        /// <returns>bool</returns>
+        Task<bool> DeleteProductOptionAsync(Guid id);
 
-        /// <summary>
-        /// Update option price increment
-        /// </summary>
-        /// <param name="ProductOption">Product option</param>
-        /// <param name="optionpriceincrement">Option price increment</param>
-        /// <returns>ProductOption</returns>
-        Task<ProductOption> UpdateOptionPriceIncrement(ProductOption ProductOption, double optionpriceincrement);
-
-        /// </set>
+        /// </delete>
     }
 }

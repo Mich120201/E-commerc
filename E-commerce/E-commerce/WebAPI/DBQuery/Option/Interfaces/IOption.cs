@@ -14,34 +14,46 @@
         /// </summary>
         /// <param name="Id">Option id</param>
         /// <returns>Option/null</returns>
-        Task<Option?> GetOptionId(int Id);
-
-        /// <summary>
-        /// Get option name
-        /// </summary>
-        /// <param name="option">Option</param>
-        /// <returns>Option</returns>
-        Task<string> GetOptionName(Option option);
+        Task<Option?> GetOptionByIdAsync(Guid Id);
 
         /// </get>
 
-        ///<set>
+        ///<post>
 
         ///<summary>
         ///Create new option
         /// </summary>
-        /// <param name="optionname">Option name</param>
-        /// <returns>Option/null</returns>
-        Task<Option?> CreateOption(string optionname);
+        /// <param name="option">Option</param>
+        /// <returns>bool</returns>
+        Task<bool> CreateOptionAsync(Option option);
 
         /// <summary>
         /// Update option name
         /// </summary>
-        /// <param name="option"></param>
+        /// <param name="id">Option id</param>
         /// <param name="optionname">New option name</param>
-        /// <returns>Option</returns>
-        Task<Option> UpdateOptionName(Option option, string optionname);
+        /// <returns>bool</returns>
+        Task<bool> UpdateOptionNameAsync(Guid id, string optionname);
 
-        /// </set>
+        /// <summary>
+        /// Update all option
+        /// </summary>
+        /// <param name="id">Option id</param>
+        /// <param name="option">New option</param>
+        /// <returns>bool</returns>
+        Task<bool> UpdateOptionAsync(Guid id, Option option);
+
+        /// </post>
+
+        ///<delete>
+
+        ///<summary>
+        /// Delete option
+        /// </summary>
+        /// <param name="id">Option id</param>
+        /// <returns>bool</returns>
+        Task<bool> DeleteOptionAsync(Guid id);
+
+        /// </delete>
     }
 }

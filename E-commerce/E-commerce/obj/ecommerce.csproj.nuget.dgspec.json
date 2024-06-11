@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj": {}
+    "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj": {
+    "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj",
         "projectName": "ecommerce",
-        "projectPath": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\ecommerce.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Source\\Repos\\ecommerce\\E-commerce\\E-commerce\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

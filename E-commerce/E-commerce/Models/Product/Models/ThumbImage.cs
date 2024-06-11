@@ -7,8 +7,8 @@ namespace ecommerce.Models.Product.Models
     {
         // keys/
 
-        [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public int ThumbImagesId { get; set; }
-        public int ProductId { get; set; }
+        [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public Guid ThumbImagesId { get; set; }
+        public Guid ProductId { get; set; }
         public Product Product { get; set; }
 
         // /keys

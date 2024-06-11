@@ -10,17 +10,17 @@ namespace ecommerce.Models.Product.Models
     {
         // keys/
 
-        [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public int ProductId { get; set; }
-        public int ProductOptionId { get; set; }
-        public ProductOption ProductOption { get; set; }
+        [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public Guid ProductId { get; set; }
+        public Guid? ProductOptionId { get; set; }
+        public ProductOption? ProductOption { get; set; }
 
-        public ICollection<ThumbImage> ThumbImages { get; set; }
-        public ICollection<OrderDetail> OrderDetail { get; set; }
+        public ICollection<ThumbImage>? ThumbImages { get; set; }
+        public ICollection<OrderDetail>? OrderDetail { get; set; }
 
         // /keys
 
         [Required][MaxLength(100)] public string ProductName { get; set; }
-        [MaxLength(5000)] public string? PrductDescription { get; set; }
+        [MaxLength(5000)] public string? ProductDescription { get; set; }
         [Required] public float ProductTotalPrice { get; set; }
         [Required] public float ProductWeight { get; set; }
         [Required] public float ProductSizeX { get; set; }
