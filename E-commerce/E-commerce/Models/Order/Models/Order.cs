@@ -9,9 +9,9 @@ namespace ecommerce.Models.Order.Models
         // keys/
 
         [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public Guid OrderId { get; set; }
-        public ICollection<OrderDetail> OrderDetail { get; set; }
-        public Guid UserId { get; set; }
-        public User User { get; set; }
+        public ICollection<OrderDetail>? OrderDetail { get; set; }
+        public Guid? UserId { get; set; }
+        public User? User { get; set; }
 
         // /keys
 

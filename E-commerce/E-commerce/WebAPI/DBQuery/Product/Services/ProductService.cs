@@ -2,7 +2,7 @@
 
 namespace ecommerce.WebAPI.DBQuery.Product.Services
 {
-    using ecommerce.DBContext;
+    using ecommerce.Database.DBContext;
     using ecommerce.Models.Order.Models;
     using ecommerce.Models.Product.Models;
 
@@ -31,6 +31,10 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
         {
 
             Product? product = await _appDbContext.Products.FindAsync(id) ?? null;
+            if (product != null && product.SoftDelete)
+            {
+                return null;
+            }
             return product;
 
         }
@@ -201,13 +205,13 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
         }
 
-        public async Task<bool> DeleteProductAsync(Guid id)
+        public async Task<bool> SoftDeleteProductAsync(Guid id)
         {
             Product? product = await GetProductByIdAsync(id);
 
             if (product != null)
             {
-                _appDbContext.Products.Remove(product);
+                product.SoftDelete = true;
                 _appDbContext.SaveChanges();
                 return true;
             }

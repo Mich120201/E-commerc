@@ -9,10 +9,8 @@ namespace ecommerce.Models.Product.Models
     public class Product
     {
         // keys/
-
         [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public Guid ProductId { get; set; }
-        public Guid? ProductOptionId { get; set; }
-        public ProductOption? ProductOption { get; set; }
+        public ICollection<ProductOption>? ProductOption { get; set; }
 
         public ICollection<ThumbImage>? ThumbImages { get; set; }
         public ICollection<OrderDetail>? OrderDetail { get; set; }
@@ -27,5 +25,6 @@ namespace ecommerce.Models.Product.Models
         [Required] public float ProductSizeY { get; set; }
         [Required] public float ProductSizeZ { get; set; }
         [Required] public uint ProductStock { get; set; }
+        public bool SoftDelete {  get; set; }
     }
 }

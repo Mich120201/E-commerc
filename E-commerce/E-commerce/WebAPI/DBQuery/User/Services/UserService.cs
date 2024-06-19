@@ -1,4 +1,4 @@
-﻿using ecommerce.DBContext;
+﻿using ecommerce.Database.DBContext;
 using ecommerce.WebAPI.DBQuery.Product.Services;
 using ecommerce.WebAPI.DBQuery.User.Interfaces;
 

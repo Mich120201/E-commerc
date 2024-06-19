@@ -1,4 +1,4 @@
-﻿using ecommerce.DBContext;
+﻿using ecommerce.Database.DBContext;
 using ecommerce.Models.Option.Models;
 using ecommerce.Models.Product.Models;
 using ecommerce.WebAPI.DBQuery.Option.Interfaces;
@@ -28,7 +28,7 @@ namespace ecommerce.WebAPI.DBQuery.Option.Services
 
         public async Task<OptionGroup> GetOptionGroupByIdAsync(Guid id)
         {
-            OptionGroup? optionGroup = await GetOptionGroupByIdAsync(id);
+            OptionGroup? optionGroup = await _appDbContext.OptionsGroups.FindAsync(id);
             return optionGroup;
         }
 

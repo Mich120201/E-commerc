@@ -1,4 +1,4 @@
-﻿using ecommerce.DBContext;
+﻿using ecommerce.Database.DBContext;
 using ecommerce.Models.Option.Models;
 using ecommerce.WebAPI.DBQuery.Option.Services;
 using ecommerce.WebAPI.DBQuery.Product.Services;
@@ -20,7 +20,7 @@ namespace ecommerce.WebAPI.Controllers.Option
         }
 
         [HttpGet]
-        public async Task<ProductOption?> Get([FromBody] Guid id)
+        public async Task<ProductOption?> Get([FromQuery] Guid id)
         {
             return await _ProductOptionService.GetProductOptionByIdAsync(id);
         }
@@ -41,7 +41,7 @@ namespace ecommerce.WebAPI.Controllers.Option
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] Guid id)
+        public async Task<IActionResult> Delete([FromQuery] Guid id)
         {
             if (await _ProductOptionService.DeleteProductOptionAsync(id))
             {
@@ -54,7 +54,7 @@ namespace ecommerce.WebAPI.Controllers.Option
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(Guid id, [FromBody] ProductOption productoption)
+        public async Task<IActionResult> Put([FromQuery] Guid id, [FromBody] ProductOption productoption)
         {
             if (await _ProductOptionService.UpdateProductOptionAsync(id, productoption))
             {

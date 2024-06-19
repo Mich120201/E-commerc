@@ -1,11 +1,10 @@
-﻿using ecommerce.DBContext;
-using ecommerce.WebAPI.DBQuery.Option.Services;
+﻿using ecommerce.WebAPI.DBQuery.Option.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.WebAPI.Controllers.Option
 {
+    using ecommerce.Database.DBContext;
     using ecommerce.Models.Option.Models;
-    using ecommerce.WebAPI.DBQuery.Product.Services;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -21,7 +20,7 @@ namespace ecommerce.WebAPI.Controllers.Option
         }
 
         [HttpGet]
-        public async Task<Option?> Get([FromBody] Guid id)
+        public async Task<Option?> Get([FromQuery] Guid id)
         {
             return await _OptionService.GetOptionByIdAsync(id);
         }
@@ -42,7 +41,7 @@ namespace ecommerce.WebAPI.Controllers.Option
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] Guid id)
+        public async Task<IActionResult> Delete([FromQuery] Guid id)
         {
             if (await _OptionService.DeleteOptionAsync(id))
             {
@@ -55,7 +54,7 @@ namespace ecommerce.WebAPI.Controllers.Option
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(Guid id, [FromBody] Option option)
+        public async Task<IActionResult> Put([FromQuery] Guid id, [FromBody] Option option)
         {
             if (await _OptionService.UpdateOptionAsync(id, option))
             {

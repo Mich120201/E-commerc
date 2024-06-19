@@ -1,4 +1,4 @@
-﻿using ecommerce.DBContext;
+﻿using ecommerce.Database.DBContext;
 using ecommerce.Models.Product.Models;
 using ecommerce.WebAPI.DBQuery.Product.Services;
 using Microsoft.AspNetCore.Mvc;

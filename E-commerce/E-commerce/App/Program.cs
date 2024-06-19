@@ -1,7 +1,10 @@
+using Azure.Storage.Blobs;
 using ecommerce;
 using ecommerce.Components;
-using ecommerce.DBContext;
+using ecommerce.Database.DBContext;
+using ecommerce.Database.Blob;
 using Microsoft.EntityFrameworkCore;
+using Azure.Core;
 using ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
 
 ILogger logger = factory.CreateLogger("Program");
@@ -15,14 +18,18 @@ builder.Services.AddRazorComponents()
 //builder.Services.AddEntityFrameworkMySql();
 builder.Services.AddControllers();
 
-string? connectionString = builder.Configuration["Db_Connection_String"];
+string? BlobConnectionString = builder.Configuration["Blob_Connection_String"];
 
-if (connectionString != null)
+string? DbconnectionString = builder.Configuration["Db_Connection_String"];
+
+if (DbconnectionString != null)
 {
     try
     {
-        builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
+        builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(DbconnectionString, ServerVersion.AutoDetect(DbconnectionString)));
+        builder.Services.AddSingleton<BlobConfig>()
+            .AddSingleton(x =>new BlobServiceClient(BlobConnectionString))
+            .AddSingleton(x => new BlobClientOptions());
     }
     catch (Exception ex)
     {

@@ -459,3 +459,9 @@ C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\re
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce.pdb
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce.genruntimeconfig.cache
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ref\ecommerce.dll
+C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Azure.Core.dll
+C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\System.Memory.Data.dll

@@ -1,9 +1,9 @@
-﻿using ecommerce.DBContext;
-using ecommerce.WebAPI.DBQuery.Order.Interfaces;
+﻿using ecommerce.WebAPI.DBQuery.Order.Interfaces;
 using ecommerce.WebAPI.DBQuery.Order.Services;
 
 namespace ecommerce.WebAPI.DBQuery.Order.Services
 {
+    using ecommerce.Database.DBContext;
     using ecommerce.Models.Order.Models;
 
     /// <summary>

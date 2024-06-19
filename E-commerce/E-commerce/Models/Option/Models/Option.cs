@@ -8,7 +8,7 @@ namespace ecommerce.Models.Option.Models
         // keys/
 
         [Required][DatabaseGenerated(DatabaseGeneratedOption.Identity)][Key] public Guid OptionId { get; set; }
-        public ICollection<ProductOption> ProductOptions { get; set; }
+        public ICollection<ProductOption>? ProductOptions { get; set; }
 
         public Guid OptionGroupId { get; set; }
         public OptionGroup OptionGroup { get; set; }

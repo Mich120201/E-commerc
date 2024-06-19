@@ -4,7 +4,7 @@ using ecommerce.Models.Product.Models;
 using ecommerce.Models.User.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ecommerce.DBContext;
+namespace ecommerce.Database.DBContext;
 
 public class AppDbContext : DbContext
 {

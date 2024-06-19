@@ -1,8 +1,8 @@
-﻿using ecommerce.DBContext;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.WebAPI.Controllers.Order
 {
+    using ecommerce.Database.DBContext;
     using ecommerce.Models.Order.Models;
     using ecommerce.WebAPI.DBQuery.Order.Services;
     [Route("api/[controller]")]
@@ -19,7 +19,7 @@ namespace ecommerce.WebAPI.Controllers.Order
         }
 
         [HttpGet]
-        public async Task<Order?> Get([FromBody] Guid id)
+        public async Task<Order?> Get([FromQuery] Guid id)
         {
             return await _OrderService.GetOrderByIdAsync(id);
         }

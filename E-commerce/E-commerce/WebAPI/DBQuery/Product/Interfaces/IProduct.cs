@@ -165,7 +165,7 @@
         /// </summary>
         /// <param name="id">Product id</param>
         /// <returns>bool</returns>
-        Task<bool> DeleteProductAsync(Guid id);
+        Task<bool> SoftDeleteProductAsync(Guid id);
 
         /// </Delete>
     }
