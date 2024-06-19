@@ -1,0 +1,114 @@
+﻿@page "/personalizza"
+
+@attribute [StreamRendering]
+
+<PageTitle>Personalizza</PageTitle>
+
+<div class="all">
+    <div class="row1">
+        <div class="col-md-6">
+            <!-- Qui potresti voler aggiungere immagini o altre informazioni sul prodotto -->
+        </div>
+        <div class="col-md-6">
+            <div class="product-specs">
+                @foreach (var color in colors)
+                {
+                    <div class="select-color @(selectedColor == color ? "selected" : "")" @onclick="() => SelectColor(color)">
+                        <h6>@color</h6>
+                    </div>
+                }
+            </div>
+            <div class="product-specs">
+                @foreach (var memory in memories)
+                {
+                    <div class="select-memory @(selectedMemory == memory ? "selected" : "")" @onclick="() => SelectMemory(memory)">
+                        <h6>@memory</h6>
+                    </div>
+                }
+            </div>
+            <div class="product-specs">
+                @foreach (var process in processes)
+                {
+                    <div class="select-process @(selectedProcess == process ? "selected" : "")" @onclick="() => SelectProcess(process)">
+                        <h6>@process</h6>
+                    </div>
+                }
+            </div>
+            <div class="product-specs">
+                @foreach (var cpu in cpus)
+                {
+                    <div class="select-cpu @(selectedCpu == cpu ? "selected" : "")" @onclick="() => SelectCpu(cpu)">
+                        <h6>@cpu</h6>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="col-md-6">
+            <!-- Qui potresti voler mostrare un riepilogo delle selezioni o altre informazioni -->
+        </div>
+        <div class="col-md-6">
+            <div class="total">
+                <h2>Totale: €@CalculateTotalPrice()</h2>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-primary">Aggiungi al carrello</button>
+                <button class="btn btn-primary">Acquista</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    Option selectedColor;
+    Option selectedMemory;
+    Option selectedProcess;
+    Option selectedCpu;
+
+    List<Option> colors = new List<Option> {
+        new Option { Name = "Argento", Price = 50 },
+        new Option { Name = "Blu", Price = 50 },
+        new Option { Name = "Rosso", Price = 50 }
+    };
+
+    List<Option> memories = new List<Option> {
+        new Option { Name = "500Gb", Price = 100 },
+        new Option { Name = "1Tb", Price = 150 },
+        new Option { Name = "2Tb", Price = 200 }
+    };
+
+    List<Option> processes = new List<Option> {
+        new Option { Name = "Intel Core i5", Price = 220 },
+        new Option { Name = "Intel Core i7", Price = 320 },
+        new Option { Name = "Dual-Core(Intel i5, i7)", Price = 420 }
+    };
+
+    List<Option> cpus = new List<Option> {
+        new Option { Name = "8 Core", Price = 250 },
+        new Option { Name = "Nvidia", Price = 350 },
+        new Option { Name = "AMD", Price = 300 }
+    };
+
+    void SelectColor(Option color) => selectedColor = color;
+    void SelectMemory(Option memory) => selectedMemory = memory;
+    void SelectProcess(Option process) => selectedProcess = process;
+    void SelectCpu(Option cpu) => selectedCpu = cpu;
+
+    decimal CalculateTotalPrice()
+    {
+        decimal totalPrice = 0;
+        if (selectedColor != null) totalPrice += selectedColor.Price;
+        if (selectedMemory != null) totalPrice += selectedMemory.Price;
+        if (selectedProcess != null) totalPrice += selectedProcess.Price;
+        if (selectedCpu != null) totalPrice += selectedCpu.Price;
+
+        return totalPrice;
+    }
+
+    class Option
+    {
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+    }
+}
