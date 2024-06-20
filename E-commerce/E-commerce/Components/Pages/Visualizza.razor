@@ -1,0 +1,91 @@
+﻿@page "/visualizza"
+
+@rendermode InteractiveServer
+
+<div class="visualizza">
+    <div class="row3">
+        <img src="/download.jpg"/>
+        <div class="product-info">
+			<h1>Product Name</h1>
+			<p>Product description goes here.</p>
+			<button class="btn btn-primary">Add to Cart</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <a @onclick="() => SelectVariation(1)">
+                @if(select == 1)
+				{
+                    <div class="card-selected">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Variation 1</h5>
+                            <p class="card-text">Product variation description goes here.</p>
+                        </div>
+                    </div>
+                }
+                else
+				{
+                    <div class="card1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Variation 1</h5>
+                            <p class="card-text">Product variation description goes here.</p>
+                        </div>
+                    </div>
+                }
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a @onclick="() => SelectVariation(2)">
+                @if (select == 2)
+                {
+                    <div class="card-selected">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Variation 2</h5>
+                            <p class="card-text">Product variation description goes here.</p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="card1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Variation 2</h5>
+                            <p class="card-text">Product variation description goes here.</p>
+                        </div>
+                    </div>
+                }
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a @onclick="() => SelectVariation(3)">
+                @if (select == 3)
+                {
+                    <div class="card-selected">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Variation 3</h5>
+                            <p class="card-text">Product variation description goes here.</p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="card1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Variation 3</h5>
+                            <p class="card-text">Product variation description goes here.</p>
+                        </div>
+                    </div>
+                }
+            </a>
+        </div>
+    </div>
+</div>
+
+@code{
+    public int select = 2;
+
+    void SelectVariation(int variation)
+	{
+		select = variation;
+	}
+}

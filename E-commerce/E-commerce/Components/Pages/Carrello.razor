@@ -1,0 +1,48 @@
+﻿@page "/carrello"
+
+<div class="cart">
+    @foreach (var item in cartItems)
+    {
+        <div class="cart-item">
+            <img src="@item.ImageUrl">
+            <div class="item-details">
+                <h4>@item.Name</h4>
+                <p>@item.Description</p>
+                <p class="item-price">Prezzo: €@item.Price</p>
+                <button class="remove-item" @onclick="() => RemoveItem(item)">Rimuovi</button>
+                <button class="buy-item">Acquista</button>
+            </div>
+        </div>
+    }
+    <div class="total-price">
+        Prezzo totale: €@CalculateTotalPrice()
+    </div>
+    <button class="buy-all">Acquista tutto</button>
+</div>
+
+@code {
+    private List<CartItem> cartItems = new List<CartItem>
+    {
+        new CartItem { Name = "Nome dell'articolo 1", Description = "Descrizione dell'articolo 1", Price = 400, ImageUrl = "slider1.jpg" },
+        new CartItem { Name = "Nome dell'articolo 2", Description = "Descrizione dell'articolo 2", Price = 200, ImageUrl = "images.jpg" },
+        new CartItem { Name = "Nome dell'articolo 3", Description = "Descrizione dell'articolo 3", Price = 300, ImageUrl = "slider.jpg" },
+    };
+
+    private decimal CalculateTotalPrice()
+    {
+        return cartItems.Sum(item => item.Price);
+    }
+
+    private void RemoveItem(CartItem item)
+    {
+        cartItems.Remove(item);
+    }
+
+    class CartItem
+    {
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public string ImageUrl { get; set; }
+    }
+}

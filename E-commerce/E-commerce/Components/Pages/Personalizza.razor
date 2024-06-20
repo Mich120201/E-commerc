@@ -1,0 +1,119 @@
+﻿@page "/personalizza"
+
+@attribute [StreamRendering]
+
+<PageTitle>Personalizza</PageTitle>
+
+<style>
+    .card_p {
+        border-radius: 10px;
+        display:flex;
+        margin-left: 16%;
+    }
+
+    .col-md-6 {
+        border-radius: 5px;
+        max-width: 49%;
+        margin-right: 1%;
+    }
+</style>
+
+<div class="all">
+    <div class="row1">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Personalizza il tuo prodotto</h5>
+                    <p>Seleziona le opzioni disponibili per personalizzare il tuo prodotto.</p>
+				</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="product-specs">
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Argento</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Rosso</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Blu</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="product-specs">
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>128Gb</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>256Gb</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>1Tb</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="product-specs">
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Intel i5</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Inetl i7</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Dual Core</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="product-specs">
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Argento</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Rosso</h6>
+                    </div>
+                </div>
+                <div class="card_p">
+                    <div class="card-body">
+                        <h6>Blu</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row2">
+        <div class="col-md-6">
+            <!-- Qui potresti voler mostrare un riepilogo delle selezioni o altre informazioni -->
+        </div>
+        <div class="col-md-6">
+            <div class="total">
+                <h2>Totale: @* €@CalculateTotalPrice() *@</h2>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-primary">Aggiungi al carrello</button>
+                <button class="btn btn-primary">Acquista</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+}

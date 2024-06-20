@@ -49,3 +49,226 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+
+/*Home*/
+.banner {
+    min-height: 550px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
+    padding: 80px 5%;
+    color: #fff;
+    background-image: url('images.jpg');
+}
+.link {
+    margin-left: 45%;
+}
+.shop {
+    background-color: black;
+    color: darkgrey;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: baseline;
+}
+
+/*personalizzza*/
+
+.product-specs {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 3%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    display: flex;
+}
+
+    .product-specs h2 {
+        margin-bottom: 10px;
+    }
+
+    .product-specs ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .product-specs ul li {
+            margin-bottom: 5px;
+        }
+
+.buttons {
+    margin-top: 20px;
+    margin-left: 31%;
+}
+
+    .buttons button {
+        margin-right: 10px;
+    }
+
+.row1 {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.row2 {
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+.select-color {
+    border: 1px solid #ccc;
+    margin-right: 28%;
+    border-radius: 5px;
+    padding: 22px;
+}
+
+.select-memory {
+    border: 1px solid #ccc;
+    margin-right: 30%;
+    border-radius: 5px;
+    padding: 22px;
+}
+
+.select-process {
+    border: 1px solid #ccc;
+    margin-right: 27%;
+    border-radius: 5px;
+    padding: 22px;
+}
+
+.select-cpu {
+    border: 1px solid #ccc;
+    margin-right: 30%;
+    border-radius: 5px;
+    padding: 19px;
+}
+
+.total {
+    margin-top: 10%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    width: 33%;
+    margin-left: 35%;
+}
+
+.card_select {
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    border-block-color: black;
+    border-color: darkgoldenrod;
+}
+
+.col-md-6{
+    border-radius: 5px;
+    max-width: 49%;
+    margin-right: 1%;
+}
+
+.card_p {
+    gap: 1%;
+    margin-bottom: 4%;
+    border-radius: 10px;
+}
+
+/*Visualizza*/
+.visualizza {
+    margin-top: 1%;
+}
+
+.card1 {
+    gap: 1%;
+    margin-bottom: 4%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.row3 {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    min-height: 500px;
+}
+
+.row3 img {
+    width: 61%;
+    height: 100%;
+}
+
+.card-selected{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+    border-block-color: black;
+    border-color: darkgoldenrod;
+}
+/*Carrello*/
+.cart {
+    width: 600px;
+    min-height: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-item {
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+    .cart-item img {
+        width: 36%;
+        height: 100%;
+        margin-right: 10px;
+    }
+
+    .cart-item .item-details {
+        flex-grow: 1;
+    }
+
+        .cart-item .item-details h4 {
+            margin: 0;
+        }
+
+        .cart-item .item-details p {
+            margin: 0;
+            color: #888;
+        }
+
+.buy-all {
+    position: absolute;
+    bottom: 12px;
+    right: 32px;
+}
+
+.total-price {
+    text-align: right;
+    margin-bottom: 20px;
+}
