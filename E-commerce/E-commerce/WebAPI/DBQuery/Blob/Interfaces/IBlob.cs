@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace ecommerce.WebAPI.DBQuery.Blob.Interfaces
+﻿namespace ecommerce.WebAPI.DBQuery.Blob.Interfaces
 {
     public interface IBlob
     {

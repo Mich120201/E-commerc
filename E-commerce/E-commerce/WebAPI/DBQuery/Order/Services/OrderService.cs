@@ -1,5 +1,4 @@
 ﻿using ecommerce.WebAPI.DBQuery.Order.Interfaces;
-using ecommerce.WebAPI.DBQuery.Order.Services;
 
 namespace ecommerce.WebAPI.DBQuery.Order.Services
 {
@@ -182,14 +181,15 @@ namespace ecommerce.WebAPI.DBQuery.Order.Services
         {
             Order? Order = await GetOrderByIdAsync(id);
 
-            if (Order != null) {
+            if (Order != null)
+            {
                 Order.OrderFax = fax;
                 _appDbContext.SaveChanges();
                 return true;
             }
             else
             {
-                return false; 
+                return false;
             }
         }
 

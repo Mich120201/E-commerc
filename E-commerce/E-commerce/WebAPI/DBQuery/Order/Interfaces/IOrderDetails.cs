@@ -5,7 +5,7 @@ namespace ecommerce.WebAPI.DBQuery.Order.Interfaces
     public interface IOrderDetail
     {
         ///<get>
-        
+
         ///<summary>
         ///Get order detail
         /// </summary>
@@ -16,7 +16,7 @@ namespace ecommerce.WebAPI.DBQuery.Order.Interfaces
         /// </get>
 
         ///<post>
-        
+
         ///<summary>
         ///Create order detail
         /// </summary>

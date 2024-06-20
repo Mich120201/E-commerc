@@ -16,6 +16,11 @@
         /// <returns>Product/null</returns>
         Task<Product?> GetProductByIdAsync(Guid id);
 
+        /// <summary>
+        /// Get all products
+        /// </summary>
+        /// <returns>List<Products></returns>
+        List<Product>? GetAllProducts();
         /*
         ///<summary>
         ///Get product name

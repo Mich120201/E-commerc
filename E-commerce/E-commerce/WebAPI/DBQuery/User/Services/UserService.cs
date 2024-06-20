@@ -1,5 +1,4 @@
 ﻿using ecommerce.Database.DBContext;
-using ecommerce.WebAPI.DBQuery.Product.Services;
 using ecommerce.WebAPI.DBQuery.User.Interfaces;
 
 namespace ecommerce.WebAPI.DBQuery.User.Services
@@ -116,9 +115,9 @@ namespace ecommerce.WebAPI.DBQuery.User.Services
             throw new NotImplementedException();
         }
 
-        Task<bool> IUser.UpdateUserAsync(Guid id, Models.User.Models.User user) 
-        { 
-            throw new NotImplementedException(); 
+        Task<bool> IUser.UpdateUserAsync(Guid id, Models.User.Models.User user)
+        {
+            throw new NotImplementedException();
         }
 
         Task<Models.User.Models.User> IUser.UpdateZipAsync(Models.User.Models.User user, string? zip)

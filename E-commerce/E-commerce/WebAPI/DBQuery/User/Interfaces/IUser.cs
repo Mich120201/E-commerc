@@ -1,7 +1,6 @@
 ﻿namespace ecommerce.WebAPI.DBQuery.User.Interfaces
 {
     using Models.User.Models;
-    using NuGet.Packaging.Signing;
 
     /// <summary>
     /// Interface for user model

@@ -1,7 +1,6 @@
 ﻿using ecommerce.Database.DBContext;
 using ecommerce.Models.Order.Models;
 using ecommerce.WebAPI.DBQuery.Order.Services;
-using ecommerce.WebAPI.DBQuery.Product.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ecommerce.WebAPI.Controllers.Order
