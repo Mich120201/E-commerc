@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\WebAPI\\DBQuery\\Option\\Interfaces\\IOptionGroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-commerce\\E-commerce\\WebAPI\\DBQuery\\Option\\Interfaces\\IOptionGroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Models\\Option\\Models\\OptionGroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-commerce\\E-commerce\\Models\\Option\\Models\\OptionGroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\ecommerce\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,8 +9,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 210,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -29,36 +24,8 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IOptionGroup.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\WebAPI\\DBQuery\\Option\\Interfaces\\IOptionGroup.cs",
-              "RelativeDocumentMoniker": "E-commerce\\E-commerce\\WebAPI\\DBQuery\\Option\\Interfaces\\IOptionGroup.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\WebAPI\\DBQuery\\Option\\Interfaces\\IOptionGroup.cs",
-              "RelativeToolTip": "E-commerce\\E-commerce\\WebAPI\\DBQuery\\Option\\Interfaces\\IOptionGroup.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAiwBwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T07:31:43.007Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OptionGroup.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Models\\Option\\Models\\OptionGroup.cs",
-              "RelativeDocumentMoniker": "E-commerce\\E-commerce\\Models\\Option\\Models\\OptionGroup.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Models\\Option\\Models\\OptionGroup.cs",
-              "RelativeToolTip": "E-commerce\\E-commerce\\Models\\Option\\Models\\OptionGroup.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T07:32:03.453Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

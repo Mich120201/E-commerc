@@ -1,16 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\E-commerce",
-    "\\E-commerce\\E-commerce",
-    "\\E-commerce\\E-commerce\\Models",
-    "\\E-commerce\\E-commerce\\Models\\Option",
-    "\\E-commerce\\E-commerce\\Models\\Option\\Models",
-    "\\E-commerce\\E-commerce\\WebAPI",
-    "\\E-commerce\\E-commerce\\WebAPI\\DBQuery",
-    "\\E-commerce\\E-commerce\\WebAPI\\DBQuery\\Product",
-    "\\E-commerce\\E-commerce\\WebAPI\\DBQuery\\Product\\Interfaces"
+    ""
   ],
-  "SelectedNode": "\\E-commerce\\E-commerce\\WebAPI\\DBQuery\\Product\\Interfaces\\IProduct.cs",
   "PreviewInSolutionExplorer": false
 }
