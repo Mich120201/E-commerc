@@ -10,7 +10,7 @@ namespace ecommerce.Database.Blob
 
         public BlobConfig(BlobServiceClient blobServiceClient, BlobClientOptions blobClientOptions)
         {
-            
+
             _blobServiceClient = blobServiceClient;
             _blobClientOptions = blobClientOptions;
             _blobContainerClient = _blobServiceClient.GetBlobContainerClient("thumbs");

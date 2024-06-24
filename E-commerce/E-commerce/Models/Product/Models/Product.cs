@@ -25,6 +25,6 @@ namespace ecommerce.Models.Product.Models
         [Required] public float ProductSizeY { get; set; }
         [Required] public float ProductSizeZ { get; set; }
         [Required] public uint ProductStock { get; set; }
-        public bool SoftDelete {  get; set; }
+        public bool SoftDelete { get; set; }
     }
 }

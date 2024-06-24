@@ -3,7 +3,6 @@
 namespace ecommerce.WebAPI.DBQuery.Product.Services
 {
     using ecommerce.Database.DBContext;
-    using ecommerce.Models.Order.Models;
     using ecommerce.Models.Product.Models;
 
     /// <summary>
@@ -37,6 +36,12 @@ namespace ecommerce.WebAPI.DBQuery.Product.Services
             }
             return product;
 
+        }
+
+        public List<Product>? GetAllProducts()
+        {
+            List<Product> products = _appDbContext.Products.Where(product => !product.SoftDelete).ToList();
+            return products;
         }
 
         public async Task<bool> CreateProductAsync(Product product)

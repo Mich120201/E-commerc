@@ -2,13 +2,9 @@
 
 namespace ecommerce.WebAPI.Controllers.Product
 {
-    using System.Runtime.InteropServices.ObjectiveC;
     using ecommerce.Database.DBContext;
-    using ecommerce.Models.Option.Models;
     using ecommerce.Models.Product.Models;
-    using ecommerce.WebAPI.DBQuery.Option.Interfaces;
     using ecommerce.WebAPI.DBQuery.Option.Services;
-    using ecommerce.WebAPI.DBQuery.Order.Services;
     using ecommerce.WebAPI.DBQuery.Product.Services;
 
     [Route("api/[controller]")]

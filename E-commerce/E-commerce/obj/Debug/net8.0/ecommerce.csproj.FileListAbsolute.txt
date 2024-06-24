@@ -450,7 +450,6 @@ C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\st
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ecommerce.props
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\scopedcss\bundle\ecommerce.styles.css
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\scopedcss\projectbundle\ecommerce.bundle.scp.css
 C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce.csproj.Up2Date

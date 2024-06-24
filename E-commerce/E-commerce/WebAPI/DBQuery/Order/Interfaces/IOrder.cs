@@ -5,7 +5,7 @@ namespace ecommerce.WebAPI.DBQuery.Order.Interfaces
     public interface IOrder
     {
         ///<get>
-        
+
         ///<summary>
         /// Get order by id
         /// </summary>
@@ -14,9 +14,9 @@ namespace ecommerce.WebAPI.DBQuery.Order.Interfaces
         Task<Order?> GetOrderByIdAsync(Guid id);
 
         /// </get>
-        
+
         ///<post>
-        
+
         ///<summary>
         /// Create order
         /// </summary>
@@ -73,7 +73,7 @@ namespace ecommerce.WebAPI.DBQuery.Order.Interfaces
         ///<delete>
 
         Task<bool> DeleteOrderAsync(Guid id);
-        
+
         /// </delete>
     }
 }

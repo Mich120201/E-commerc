@@ -1,10 +1,10 @@
 using Azure.Storage.Blobs;
 using ecommerce;
 using ecommerce.Components;
-using ecommerce.Database.DBContext;
 using ecommerce.Database.Blob;
+using ecommerce.Database.DBContext;
 using Microsoft.EntityFrameworkCore;
-using Azure.Core;
+using Stripe;
 using ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
 
 ILogger logger = factory.CreateLogger("Program");
@@ -18,9 +18,13 @@ builder.Services.AddRazorComponents()
 //builder.Services.AddEntityFrameworkMySql();
 builder.Services.AddControllers();
 
+string? StripeAPIKey = builder.Configuration["Stripe_PK"];
+
 string? BlobConnectionString = builder.Configuration["Blob_Connection_String"];
 
 string? DbconnectionString = builder.Configuration["Db_Connection_String"];
+
+StripeConfiguration.ApiKey = StripeAPIKey;
 
 if (DbconnectionString != null)
 {
@@ -28,7 +32,7 @@ if (DbconnectionString != null)
     {
         builder.Services.AddDbContext<AppDbContext>(options => options.UseMySql(DbconnectionString, ServerVersion.AutoDetect(DbconnectionString)));
         builder.Services.AddSingleton<BlobConfig>()
-            .AddSingleton(x =>new BlobServiceClient(BlobConnectionString))
+            .AddSingleton(x => new BlobServiceClient(BlobConnectionString))
             .AddSingleton(x => new BlobClientOptions());
     }
     catch (Exception ex)

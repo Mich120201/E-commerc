@@ -15,9 +15,9 @@ namespace ecommerce.WebAPI.DBQuery.Option.Interfaces
         Task<OptionGroup> GetOptionGroupByIdAsync(Guid id);
 
         ///</get>
-        
+
         ///<post>
-        
+
         ///<summary>
         ///Create new option group
         /// </summary>
@@ -53,6 +53,6 @@ namespace ecommerce.WebAPI.DBQuery.Option.Interfaces
         Task<bool> DeleteOptionGroupAsync(Guid id);
 
         ///</delete>
-        
+
     }
 }

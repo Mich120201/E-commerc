@@ -1,9 +1,6 @@
 ﻿using ecommerce.Database.DBContext;
-using ecommerce.Models.Option.Models;
 using ecommerce.Models.Order.Models;
-using ecommerce.Models.Product.Models;
 using ecommerce.WebAPI.DBQuery.Order.Interfaces;
-using ecommerce.WebAPI.DBQuery.Product.Services;
 
 namespace ecommerce.WebAPI.DBQuery.Order.Services
 {

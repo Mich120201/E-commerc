@@ -54,8 +54,8 @@ namespace ecommerce.WebAPI.Controllers.Order
 
         [HttpPut]
         public async Task<IActionResult> Put(Guid id, [FromBody] Order order)
-        {  
-            if(await _OrderService.UpdateOrderAsync(id, order))
+        {
+            if (await _OrderService.UpdateOrderAsync(id, order))
             {
                 return StatusCode(200, true);
             }

@@ -1,8 +1,5 @@
-﻿using System.Drawing;
-using Azure;
+﻿using Azure;
 using Azure.Storage.Blobs;
-using Azure.Storage.Blobs.Models;
-using Azure.Storage.Blobs.Specialized;
 using ecommerce.Database.Blob;
 using ecommerce.WebAPI.DBQuery.Blob.Interfaces;
 using ecommerce.WebAPI.DBQuery.Option.Services;
@@ -14,7 +11,7 @@ namespace ecommerce.WebAPI.DBQuery.Blob.Services
         private readonly BlobServiceClient blobServiceClient;
         private readonly BlobContainerClient blobContainerClient;
         private readonly ErrorHandler _errorHandler;
-        
+
         public BlobService(BlobConfig blobConfig)
         {
             blobServiceClient = blobConfig._blobServiceClient;
@@ -44,7 +41,7 @@ namespace ecommerce.WebAPI.DBQuery.Blob.Services
                     string newFileName = Path.GetFileNameWithoutExtension(fileName);
                     char p = newFileName[newFileName.Length - 1];
 
-                    if(p == ')')
+                    if (p == ')')
                     {
                         int index = newFileName.Length;
                         char q;
@@ -53,7 +50,7 @@ namespace ecommerce.WebAPI.DBQuery.Blob.Services
                             index--;
                             q = newFileName[index];
 
-                        }while(q != '(' | index >= 0);
+                        } while (q != '(' | index >= 0);
 
                         if (q == ')')
                         {

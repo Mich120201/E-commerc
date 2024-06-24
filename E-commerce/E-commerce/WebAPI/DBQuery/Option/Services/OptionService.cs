@@ -1,10 +1,7 @@
-﻿using ecommerce.WebAPI.DBQuery.Product.Services;
-
-namespace ecommerce.WebAPI.DBQuery.Option.Services
+﻿namespace ecommerce.WebAPI.DBQuery.Option.Services
 {
     using ecommerce.Database.DBContext;
     using ecommerce.Models.Option.Models;
-    using ecommerce.Models.Product.Models;
     using ecommerce.WebAPI.DBQuery.Option.Interfaces;
 
     /// <summary>

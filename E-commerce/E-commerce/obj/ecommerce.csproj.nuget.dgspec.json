@@ -67,6 +67,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[44.13.0, )"
             }
           },
           "imports": [
