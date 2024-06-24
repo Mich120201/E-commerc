@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ecommerce.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\Home.jpeg",
+      "PackagePath": "staticwebassets\\Home.jpeg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },

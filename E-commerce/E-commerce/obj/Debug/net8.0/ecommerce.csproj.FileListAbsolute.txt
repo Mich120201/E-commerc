@@ -700,3 +700,4 @@ C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\scopedcss
 C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce.csproj.Up2Date
 C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce.genruntimeconfig.cache
 C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ref\ecommerce.dll
+C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Stripe.net.dll

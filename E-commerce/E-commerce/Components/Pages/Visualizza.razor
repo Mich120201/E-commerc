@@ -2,7 +2,7 @@
 
 @rendermode InteractiveServer
 
-<div class="visualizza">
+@* <div class="visualizza">
     <div class="row3">
         <img src="/download.jpg"/>
         <div class="product-info">
@@ -79,6 +79,50 @@
             </a>
         </div>
     </div>
+</div> *@
+
+<style>
+    .macbook-container {
+        text-align: center;
+        margin: 20px;
+    }
+
+        .macbook-container img {
+            width: 300px;
+        }
+
+    .variant-options {
+        margin-top: 20px;
+    }
+
+    #standard-variant, #lite-variant, #pro-variant {
+        padding: 5px 10px;
+        margin: 0 10px;
+        cursor: pointer;
+        border: 1px solid #333;
+        background-color: #f0f0f0;
+    }
+
+        #standard-variant:hover, #lite-variant:hover, #pro-variant:hover {
+            background-color: #e0e0e0;
+        }
+</style>
+
+<div class="macbook-container">
+    <img src="macbook.jpg" alt="MacBook">
+        <h2>MacBook</h2>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eleifend turpis.</p>
+        <p>Specifications:</p>
+            <ul>
+                <li>Processor: Intel Core i5</li>
+                <li>Memory: 8GB RAM</li>
+                <li>Storage: 256GB SSD</li>
+            </ul>
+        <div class="variant-options">
+            <button id="standard-variant" onclick="changeVariant('standard')">Standard</button>
+            <button id="lite-variant" onclick="changeVariant('lite')">Lite</button>
+            <button id="pro-variant" onclick="changeVariant('pro')">Pro</button>
+        </div>
 </div>
 
 @code{

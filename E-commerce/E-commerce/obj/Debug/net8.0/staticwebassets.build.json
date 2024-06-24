@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/kEVNGehlP0SME1V4vt028FxAZ1i7whstdAwijtDeLI=",
+  "Hash": "jO8VEG7tnNUiVrvMK3SiDOu0kzHMPR65+hWNyOur2+E=",
   "Source": "ecommerce",
   "BasePath": "_content/ecommerce",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\Home.jpeg",
+      "SourceId": "ecommerce",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\",
+      "BasePath": "_content/ecommerce",
+      "RelativePath": "Home.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Home.jpeg"
     }
   ]
 }

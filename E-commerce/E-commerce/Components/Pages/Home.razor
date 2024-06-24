@@ -2,8 +2,53 @@
 
 <PageTitle>Home</PageTitle>
 
-<div class="banner">
+@* <div class="banner">
     <a href="/visualizza" style="margin-left: 45%;">
         <button class="shop">ACQUISTA!</button>
     </a>
-</div>
+</div> *@
+
+<style>
+    /* styles.css */
+
+    .product {
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .price {
+        font-weight: bold;
+    }
+
+    button {
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+</style>
+
+<article class="product">
+    <img src="macbook.jpg" alt="MacBook">
+    <h2>MacBook Pro</h2>
+    <p class="price">$2000</p>
+    <button>Add to Cart</button>
+</article>
+<footer>
+    <p>&copy; 2022 MacBook E-Commerce. All rights reserved.</p>
+</footer>

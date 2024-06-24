@@ -1,26 +1,69 @@
 ﻿@page "/amministrazione"
 
+@* @using ecommerce.Models.Product.Models
+
 <h3>Amministrazione</h3>
+<a href="c:\users\user\desktop\ecommerce\e-commerce\e-commerce\app\program.cs">c:\users\user\desktop\ecommerce\e-commerce\e-commerce\app\program.cs</a>
+<form @onsubmit="SaveData">
+    <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" id="productName" @bind="@product.ProductName" required>
+    </div>
+    <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <textarea class="form-control" id="productDescription" @bind="@product.ProductDescription"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="productTotalPrice">Product Total Price</label>
+        <input type="number" class="form-control" id="productTotalPrice" @bind="@product.ProductTotalPrice" required>
+    </div>
+    <div class="form-group">
+        <label for="productWeight">Product Weight</label>
+        <input type="number" class="form-control" id="productWeight" @bind="@product.ProductWeight" required>
+    </div>
+    <div class="form-group">
+        <label for="productSizeX">Product Size X</label>
+        <input type="number" class="form-control" id="productSizeX" @bind="@product.ProductSizeX" required>
+    </div>
+    <div class="form-group">
+        <label for="productSizeY">Product Size Y</label>
+        <input type="number" class="form-control" id="productSizeY" @bind="@product.ProductSizeY" required>
+    </div>
+    <div class="form-group">
+        <label for="productSizeZ">Product Size Z</label>
+        <input type="number" class="form-control" id="productSizeZ" @bind="@product.ProductSizeZ" required>
+    </div>
+    <div class="form-group">
+        <label for="productStock">Product Stock</label>
+        <input type="number" class="form-control" id="productStock" @bind="@product.ProductStock" required>
+    </div>
+    <div class="form-group">
+        <label for="softDelete">Soft Delete</label>
+        <input type="checkbox" class="form-control" id="softDelete" @bind="@product.SoftDelete">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-<EditForm Model="input", OnSubmit="@Validate">
-    <InputText @bind-Value=input.name></InputText>
-</EditForm>
+@code {
+    private Product product = new Product();
 
-<div class="text-center mt-4">
-    <button class="btn btn-primary">Modifica</button>
-</div>
-
-@code 
-{
-    InputModel input = new InputModel();
-
-    void Validate()
+    private void SaveData()
     {
+        // Save the data entered in the form to the product object
+        product.ProductName = product.ProductName;
+        product.ProductDescription = product.ProductDescription;
+        product.ProductTotalPrice = product.ProductTotalPrice;
+        product.ProductWeight = product.ProductWeight;
+        product.ProductSizeX = product.ProductSizeX;
+        product.ProductSizeY = product.ProductSizeY;
+        product.ProductSizeZ = product.ProductSizeZ;
+        product.ProductStock = product.ProductStock;
+        product.SoftDelete = product.SoftDelete;
 
+        using (var dbContext = new ApplicationDbContext())
+        {
+            dbContext.Products.Add(product);
+            dbContext.SaveChanges();
+        }
     }
-
-    public class InputModel
-    {
-        public string name { get; set; }
-    }
-}
+} *@
