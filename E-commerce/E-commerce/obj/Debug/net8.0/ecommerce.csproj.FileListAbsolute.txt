@@ -701,3 +701,14 @@ C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce
 C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ecommerce.genruntimeconfig.cache
 C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\obj\Debug\net8.0\ref\ecommerce.dll
 C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\CheckoutSdk.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\BlazorBootstrap.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Lenovo\Source\Repos\ecommerce\E-commerce\E-commerce\bin\Debug\net8.0\Microsoft.JSInterop.dll

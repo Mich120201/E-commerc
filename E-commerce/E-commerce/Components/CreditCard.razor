@@ -1,0 +1,52 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+<div class="credit-form">
+    <EditForm Model="@creditCardModel" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <div>
+            <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; flex-direction: column;">
+                    <label>nome</label>
+                    <input @bind:event="oninput" @bind:get="creditCardModel.Name" @bind:set="FormatName" class="@nameClass" spellcheck="false" maxlength="50"/>
+                    <ValidationMessage For="@(()=>creditCardModel.Name)"></ValidationMessage>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                    <label>cognome</label>
+                    <input @bind:event="oninput" @bind:get="creditCardModel.Surname" @bind:set="FormatSurname" class="@surnameClass" spellcheck="false" maxlength="50" />
+                    <ValidationMessage For="@(()=>creditCardModel.Surname)"></ValidationMessage>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 30px;">
+            <div>
+                <label>numero carta</label>
+                <input @bind:event="oninput" @bind:get="creditCardModel.CardNumber" @bind:set="FormatCreditCardNumber" placeholder="0000 0000 0000 0000" type="text" class="@cardNumberClass" maxlength="19" />
+                <ValidationMessage For="@(()=>creditCardModel.CardNumber)"></ValidationMessage>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+            <div class="cvv" style="margin-right: 15px;">
+                <label>cvv</label>
+                <input @bind:event="oninput" @bind:get="creditCardModel.Cvv" @bind:set="FormatCvvNumber" placeholder="0000" type="text" class="@CvvNumberCLass" maxlength="4" />
+                <ValidationMessage For="@(()=>creditCardModel.Cvv)"></ValidationMessage>
+            </div>
+            <div class="expiry">
+                <label>scadenza</label>
+                <input @bind:event="oninput" @bind:get="creditCardModel.ExpiryDate" @bind:set="FormatExpiryDate" mask="0000" placeholder="mm/aa" type="tel" class="@expiryDateClass" maxlength="5" />
+                <ValidationMessage For="@(()=>creditCardModel.ExpiryDate)"></ValidationMessage>
+            </div>
+        </div>
+        <div class="submit-button-container">
+         <Button Class="btn btn-primary" Type="ButtonType.Submit">Paga</Button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private CardDetailsInputModel creditCardModel = new CardDetailsInputModel();
+    private string nameClass = "form-control credit-form-input";
+    private string surnameClass = "form-control credit-form-input";
+    private string cardNumberClass = "form-control credit-form-input";
+    private string CvvNumberCLass = "form-control credit-form-input";
+    private string expiryDateClass = "form-control credit-form-input";
+}

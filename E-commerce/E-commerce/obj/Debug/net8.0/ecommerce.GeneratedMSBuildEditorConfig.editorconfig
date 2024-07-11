@@ -17,55 +17,63 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ecommerce
 build_property.RootNamespace = ecommerce
-build_property.ProjectDir = C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce\
+build_property.ProjectDir = C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\ecommerce\E-commerce\E-commerce
+build_property.MSBuildProjectDirectory = C:\Users\Lenovo\source\repos\ecommerce\E-commerce\E-commerce
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/App.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Layout/NavigationBar.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/CreditCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVkaXRDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Layout/NavigationBar.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2aWdhdGlvbkJhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Pages/Amministrazione.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Amministrazione.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbW1pbmlzdHJhemlvbmUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Pages/Carrello.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Carrello.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJyZWxsby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Pages/Error.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Checkout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGVja291dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Pages/Home.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Pages/Personalizza.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Personalizza.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJzb25hbGl6emEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Pages/Visualizza.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Pages/Visualizza.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaXN1YWxpenphLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Routes.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/_Imports.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/ecommerce/E-commerce/E-commerce/Components/Layout/MainLayout.razor]
+[C:/Users/Lenovo/source/repos/ecommerce/E-commerce/E-commerce/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-dumq06ufjv

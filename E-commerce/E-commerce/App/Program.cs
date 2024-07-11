@@ -1,10 +1,11 @@
 using Azure.Storage.Blobs;
+using Checkout;
 using ecommerce;
 using ecommerce.Components;
 using ecommerce.Database.Blob;
 using ecommerce.Database.DBContext;
 using Microsoft.EntityFrameworkCore;
-using Stripe;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 using ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
 
 ILogger logger = factory.CreateLogger("Program");
@@ -17,14 +18,13 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 //builder.Services.AddEntityFrameworkMySql();
 builder.Services.AddControllers();
+builder.Services.AddBlazorBootstrap();
 
-string? StripeAPIKey = builder.Configuration["Stripe_PK"];
+string? CheckoutPK = builder.Configuration["Checkout_PK"];
 
 string? BlobConnectionString = builder.Configuration["Blob_Connection_String"];
 
 string? DbconnectionString = builder.Configuration["Db_Connection_String"];
-
-StripeConfiguration.ApiKey = StripeAPIKey;
 
 if (DbconnectionString != null)
 {
@@ -34,6 +34,13 @@ if (DbconnectionString != null)
         builder.Services.AddSingleton<BlobConfig>()
             .AddSingleton(x => new BlobServiceClient(BlobConnectionString))
             .AddSingleton(x => new BlobClientOptions());
+        ICheckoutApi api = CheckoutSdk.Builder()
+            .StaticKeys()
+            .SecretKey(CheckoutPK)
+            .Environment(Checkout.Environment.Sandbox)
+            .HttpClientFactory(new DefaultHttpClientFactory())
+            .Build();
+        builder.Services.AddSingleton(api);
     }
     catch (Exception ex)
     {

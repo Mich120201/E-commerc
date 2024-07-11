@@ -272,3 +272,21 @@ h1:focus {
     text-align: right;
     margin-bottom: 20px;
 }
+
+.credit-form {
+    display: flex;
+}
+
+.credit-form-input {
+    background-image: none !important;
+    border-style: none !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: thin !important;
+    margin-top: 5px;
+}
+
+.submit-button-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
