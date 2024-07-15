@@ -1,6 +1,7 @@
 ﻿@page "/checkout"
 
-<CreditCard></CreditCard>
+<CreditCard @bind-Amount="@Amount"></CreditCard>
 
 @code {
+	public long Amount = 1000;
 }

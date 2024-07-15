@@ -3,23 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\webapi\\controllers\\checkout\\checkoutpaymentrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\webapi\\controllers\\checkout\\checkoutpaymentrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\components\\creditcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\components\\creditcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\components\\creditcard.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\components\\creditcard.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\AppData\\Roaming\\Microsoft\\UserSecrets\\88b165ea-8e37-4a8e-9649-de7343e079fe\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\components\\pages\\checkout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\components\\pages\\checkout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\components\\creditcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\components\\creditcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|c:\\users\\lenovo\\source\\repos\\ecommerce\\e-commerce\\e-commerce\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{098ADB79-A6E3-40D0-A9C4-9CBCB5532DC3}|E-commerce\\ecommerce.csproj|solutionrelative:e-commerce\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 222,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,38 +39,37 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\AppData\\Roaming\\Microsoft\\UserSecrets\\88b165ea-8e37-4a8e-9649-de7343e079fe\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\88b165ea-8e37-4a8e-9649-de7343e079fe\\secrets.json",
-              "ToolTip": "C:\\Users\\Lenovo\\AppData\\Roaming\\Microsoft\\UserSecrets\\88b165ea-8e37-4a8e-9649-de7343e079fe\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\88b165ea-8e37-4a8e-9649-de7343e079fe\\secrets.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-11T08:50:56.166Z",
+              "Title": "Checkout.razor",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\Pages\\Checkout.razor",
+              "RelativeDocumentMoniker": "E-commerce\\Components\\Pages\\Checkout.razor",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\Pages\\Checkout.razor",
+              "RelativeToolTip": "E-commerce\\Components\\Pages\\Checkout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-15T12:45:38.097Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\App\\Program.cs",
-              "RelativeDocumentMoniker": "E-commerce\\App\\Program.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\App\\Program.cs",
-              "RelativeToolTip": "E-commerce\\App\\Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACUAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T10:57:22.023Z",
-              "EditorCaption": ""
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "E-commerce\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\wwwroot\\app.css",
+              "RelativeToolTip": "E-commerce\\wwwroot\\app.css",
+              "ViewState": "AQIAAAgBAAAAAAAAAAAAACgBAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-15T12:33:48.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "CreditCard.razor",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\CreditCard.razor",
               "RelativeDocumentMoniker": "E-commerce\\Components\\CreditCard.razor",
               "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\CreditCard.razor",
               "RelativeToolTip": "E-commerce\\Components\\CreditCard.razor",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC0AAABQAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAEUAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-10T08:54:12.989Z",
               "EditorCaption": ""
@@ -84,24 +80,11 @@
               "Title": "CreditCard.razor.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\CreditCard.razor.cs",
               "RelativeDocumentMoniker": "E-commerce\\Components\\CreditCard.razor.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\CreditCard.razor.cs",
-              "RelativeToolTip": "E-commerce\\Components\\CreditCard.razor.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAlwDcAAAAUAAAA",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\Components\\CreditCard.razor.cs*",
+              "RelativeToolTip": "E-commerce\\Components\\CreditCard.razor.cs*",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAcwJoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-10T08:59:59.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CheckoutPaymentRequestController.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\WebAPI\\Controllers\\Checkout\\CheckoutPaymentRequestController.cs",
-              "RelativeDocumentMoniker": "E-commerce\\WebAPI\\Controllers\\Checkout\\CheckoutPaymentRequestController.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\ecommerce\\E-commerce\\E-commerce\\WebAPI\\Controllers\\Checkout\\CheckoutPaymentRequestController.cs",
-              "RelativeToolTip": "E-commerce\\WebAPI\\Controllers\\Checkout\\CheckoutPaymentRequestController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAmwBkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T10:13:17.805Z",
               "EditorCaption": ""
             }
           ]

@@ -1,85 +1,37 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Net.Http.Headers;
-using System.Text;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using Azure.Core;
 using Checkout.Common;
 using Checkout.Payments;
 using Checkout.Payments.Request;
 using Checkout.Payments.Request.Source;
-using Checkout.Payments.Sessions;
 using NuGet.Protocol;
-
+using System.Text;
+using ecommerce.Models.CardDetailsInputModel;
+using Microsoft.AspNetCore.Components;
 
 namespace ecommerce.Components
 {
     public partial class CreditCard
-    {
-        private class CardDetailsInputModel()
-        {
-            [Required(ErrorMessage = "nome richiesto")]
-            [MaxLength(50)]
-            public string Name { get; set; }
-
-            [Required(ErrorMessage = "cognome richiesto")]
-            public string Surname { get; set; }
-
-            [Required]
-            public long Amount = 10;
-
-            [Required(ErrorMessage = "numero carta rechiesto")]
-            [MinLength(18, ErrorMessage = "numero carta invalido")]
-            [MaxLength(19, ErrorMessage = "numero carta invalido")]
-            public string CardNumber { get; set; }
-
-            [Required(ErrorMessage = "codice di sicurezza richiesto")]
-            [MinLength(3, ErrorMessage = "numero Cvv invalido")]
-            [MaxLength(4, ErrorMessage = "numero Cvv invalido")]
-            public string Cvv { get; set; }
-
-            [Required(ErrorMessage = "data di scadenza richiesta")]
-            [MaxLength(5, ErrorMessage = "data di scadenza invalida")]
-            [MinLength(5, ErrorMessage = "data di scadenza invalida")]
-            public string ExpiryDate { get; set; }
-        }
-
-        private async Task<object?> ProcessRequestPayment(CardDetailsInputModel cardDetailsInputModel)
+    { 
+        private string? applicationUrl { get; set; }
+        private async Task ProcessRequestPayment(CardDetailsInputModel cardDetailsInputModel)
         {
             HttpClient client = new HttpClient();
 
-            PaymentRequest paymentRequest = new PaymentRequest()
-            {
-                Source = new RequestCardSource
-                {
-                    Type = PaymentSourceType.Card,
-                    Number = cardDetailsInputModel.CardNumber.Replace(" ", ""),
-                    Cvv = cardDetailsInputModel.Cvv,
-                    ExpiryMonth = int.Parse(cardDetailsInputModel.ExpiryDate.Split('/')[0]),
-                    ExpiryYear = int.Parse(cardDetailsInputModel.ExpiryDate.Split('/')[1]),
-                },
-                Amount = cardDetailsInputModel.Amount,
-                Currency = Currency.EUR,
-                PaymentType = PaymentType.Regular,
-                ProcessingChannelId = "pc_tagrwyahn2au7ebbcec5khd43e",
-                Customer = new CustomerRequest
-                {
-                    Name = creditCardModel.Name + " " + creditCardModel.Surname
-                }
-            };
-            var content = new StringContent(JsonSerializer.Serialize(paymentRequest), Encoding.UTF8, "application/json");
-            var response = await client.PostAsJsonAsync("https://localhost:7246/api/CheckoutPaymentRequest", content);
+            applicationUrl = Environment.GetEnvironmentVariable("ASPNETCORE_URLS");
 
-            if (response.IsSuccessStatusCode)
+            cardDetailsInputModel.Amount = Amount;
+            HttpResponseMessage response = new();
+            if (applicationUrl != null)
             {
-                var result = await response.Content.ReadAsStringAsync();
-                return result;
+                response = await client.PostAsJsonAsync($"{applicationUrl.Split(";")[0] ?? applicationUrl.Split(";")[1]}/api/CheckoutPaymentRequest", cardDetailsInputModel);
             }
-            else
+
+            if(response == null) SuccessPaymentCode = 0;
+            if(response != null)
             {
-                var errorContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Errore: {response.StatusCode} - {errorContent}");
-                return null;
+                if(response.IsSuccessStatusCode) SuccessPaymentCode = 1;
+                else SuccessPaymentCode = 0;
             }
         }
         private void FormatName(string? Value)
@@ -199,14 +151,10 @@ namespace ecommerce.Components
             }
             return true;
         }
-
         private async Task HandleValidSubmit()
         {
-            object? result = await ProcessRequestPayment(creditCardModel);
-            if(result != null)
-            {
-                Console.WriteLine(result.ToJToken());
-            }
+            paymentSend = true;
+            await ProcessRequestPayment(creditCardModel);
         }
     }
 }

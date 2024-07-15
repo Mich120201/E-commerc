@@ -1,4 +1,5 @@
 ﻿@using System.ComponentModel.DataAnnotations
+@using ecommerce.Models.CardDetailsInputModel
 
 <div class="credit-form">
     <EditForm Model="@creditCardModel" OnValidSubmit="HandleValidSubmit">
@@ -39,14 +40,32 @@
         <div class="submit-button-container">
          <Button Class="btn btn-primary" Type="ButtonType.Submit">Paga</Button>
         </div>
+        @if(SuccessPaymentCode == 1 && paymentSend)
+        {
+            <div class="Payment-alert">
+                <label style="color: green">transazione completata</label>
+            </div>
+        }
+        else if(SuccessPaymentCode == 0 && paymentSend)
+        {
+            <div class="Payment-alert">
+                <label style="color: red">non è stato possibile completare la transazione: verificare i dati inseriti</label>
+            </div>
+        }
     </EditForm>
 </div>
 
 @code {
     private CardDetailsInputModel creditCardModel = new CardDetailsInputModel();
+    private bool paymentSend;
+    private int SuccessPaymentCode = -1;
     private string nameClass = "form-control credit-form-input";
     private string surnameClass = "form-control credit-form-input";
     private string cardNumberClass = "form-control credit-form-input";
     private string CvvNumberCLass = "form-control credit-form-input";
     private string expiryDateClass = "form-control credit-form-input";
+    [Parameter]
+    public long Amount { get; set; }
+    [Parameter]
+    public EventCallback<long> AmountChanged { get; set; }
 }

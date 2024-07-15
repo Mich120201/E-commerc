@@ -290,3 +290,9 @@ h1:focus {
     flex-direction: column;
     margin-top: 35px;
 }
+.Payment-alert {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    flex-direction: column;
+}
